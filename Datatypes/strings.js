@@ -63,7 +63,7 @@ console.log(concat);
 console.log(concat1);
 console.log(concat2);
 
-// String Literal ( ` )
+// String Literal ( ` ) => Grave key
 
 var a = `Javascript`; 
 var sen = `I'm leaving ${a} , very confusing`;
