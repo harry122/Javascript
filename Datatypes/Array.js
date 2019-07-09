@@ -20,10 +20,14 @@ console.log(arr[6]);
 arr1[0] = 10;
 console.log(arr1[0]);
 
+// length
 console.log(arr1.length);
 
+// Push
 arr1.push(11);
 console.log(arr1);
 
+// Pop
 arr1.pop();
 console.log(arr1);
+
