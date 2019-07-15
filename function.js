@@ -39,10 +39,10 @@ console.log("value of returned value: ",+add);
 
 
 //  problem 
-// argment only
+// argument only
 
 function mult(a,b){
-    console.log(arguments);    // Is an object but also behaves like an array.
+    console.log(arguments);    // Argumuent is an object but also behaves like an array.
     console.log(arguments.length);
     console.log(typeof arguments);
 
@@ -55,3 +55,21 @@ function mult(a,b){
 
 var res = mult(2,3,4,5,6,7,7);
 console.log(res);
+
+// WAP a program to check no. is even or odd.
+
+
+function evenOdd(num){
+
+var res = (num % 2 == 0) ? (true) : (false);
+return res;
+
+}
+
+if(evenOdd(33)){
+    console.log("Do something with even");
+}else{
+    console.log("not even");
+}
+
+
