@@ -18,9 +18,9 @@ function foo1(){
 foo1();
 
 // this keyword points to the current obj.
-// this keyword if used :
-// function -> window
-// method -> current obj.
+// this keyword if used points to  :
+// In function -> window
+// In method -> current obj.
 
 
 var obj = {
@@ -39,4 +39,4 @@ var obj = {
 
 }
 
-obj.description();  // method
+obj.description();  // method so it will point to obj here .

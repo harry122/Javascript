@@ -42,6 +42,7 @@ var person = {
     ]
 }
 
+console.log("type of person.bestFriend : ",person.bestFriend);
 console.log(person.bestFriend.gender);
 console.log(person.education[1].passedOutYear);
 
