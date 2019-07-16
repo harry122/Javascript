@@ -1,3 +1,6 @@
+
+// function declaration 
+
 function printName(){
     // body of function
     console.log("Harish Mehra");
