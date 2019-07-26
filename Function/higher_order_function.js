@@ -1,3 +1,5 @@
+//A higher-order function is a function that can take another function as an argument, or that returns a function as a result
+
 function outer(){
 
     var outVar = 34;

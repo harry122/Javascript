@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Wap to Print Fabonacci series which are not prime</h3>
+
+    <script>
+        
+        var fun = (n) => {
+
+            var a=0,b=1; temp=0;
+            var arr = [];
+           var arr1 = [];
+
+        while(n >=0)
+        {
+            temp = a; 
+            a = a + b;
+            b = temp;
+            n--;
+            arr.push(b);
+            
+      //    0,1,1,2,3,,5,8,13,21,34,..
+        }
+      var fun1 = () => {  
+       
+            console.log(arr);
+            for(var i = 0;i < arr.length ;i++){
+          
+                var p = 1;
+            
+                for(var j = 2 ; j<= i/2 ;j++){
+                    
+                    if(arr[i] % j == 0)
+                    {
+                     p = 0;
+                     break;
+                    }
+                }
+                if(p == 1)
+          // console.log("outer",arr[i]);
+                  arr1.push(arr[i]);            
+             //       console.log(arr1);    
+            }
+            
+      }
+      
+      fun1();
+
+      return arr1;
+        }
+    var foo = fun(14);
+    console.log(foo);  
+    </script>
+</body>
+</html>

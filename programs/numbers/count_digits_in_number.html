@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Counting digits in a number</h3>
+    <label>Enter a valid Number: </label><br><input type="number" placeholder="Enter Number" name="Number" id="num1"><br>
+    <input type="button" value="Enter" onclick="fun()">
+    
+    <script>
+        
+         fun = () => {
+            count = 0;
+             var num = document.getElementById("num1").value;
+            if(num >= 1){
+                ++count;
+            while(num /10 >= 1){
+                num =num /10;               // num /= 10;
+                alert(num);
+                ++count;
+            }
+        }
+            alert(count);      
+        }
+
+    </script>
+</body>
+</html>

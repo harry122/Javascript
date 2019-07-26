@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+    // repeating a string using while and repeat.
+var fun = (str,num) =>{
+var str1='';
+while(num > 0){
+    str1 += str;
+    num--;
+}
+    //return str.repeat(num);
+    return str1;
+   
+}
+
+var f = fun("abc",3);
+console.log("with while loop: ",f);
+
+// repeating a string using recursion
+
+
+var fun1 = (str,num) =>{
+if (num <0) return "";
+if (num == 1) return str;
+return (str + fun1(str,num-1));
+   
+}
+
+var f1 = fun1("abc",3);
+console.log("Using recursion: ",f1);
+    
+    </script>
+</body>
+</html>

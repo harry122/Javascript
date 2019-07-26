@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h2>fibonacci numbers </h2>
+    <script>
+    // 0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610
+    function fibonacci(num) {
+
+        var arr = [];   
+
+        if (num == 0) return 0 ;
+
+         if (num <= 1) return 1;
+
+         return (fibonacci(num - 1) + fibonacci(num - 2));
+    }
+
+var series = fibonacci(8);
+
+console.log(series);
+
+        
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h3>removing a element</h3>
+    <div id="parent">
+        <div id="child">
+             <p>Click the button to remove me</p>
+        </div>
+        <p id="val"></p>
+    </div>
+    <input type="button" value="Remove" onClick="removeElement('parent', 'child');">
+    <script>
+        
+       function removeElement(parent,child){
+
+            if(child == parent){
+
+                document.getElementById("child").innerHTML = "Cannnot remove parent";
+                
+            }else{
+
+            var ch = document.getElementById(child);
+            var pa = document.getElementById(parent);
+            pa.removeChild(ch);
+            }
+
+       }
+    
+    </script>
+</body>
+</html>

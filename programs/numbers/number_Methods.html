@@ -1,0 +1,76 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
+    <body>
+        <h3>Goto console to see the result</h3>
+        <script>
+        // to precise
+            var a = 346.384;
+            document.write("a is : ",a+"<br><br>");
+            document.write("Precise to 1: "+parseFloat(a.toPrecision(1))); document.write(" OR => Precise to 1: "+a.toPrecision(1));
+            document.write('<br>');
+            document.write("Precise to 2: "+parseFloat(a.toPrecision(2))); document.write(" OR => Precise to 2: "+a.toPrecision(2));
+            document.write('<br>');
+            document.write("Precise to 3: "+parseFloat(a.toPrecision(3))); document.write(" OR => Precise to 3: "+a.toPrecision(3));
+            document.write('<br>');
+            document.write("Precise to 4: "+parseFloat(a.toPrecision(4))); document.write(" OR => Precise to 4: "+a.toPrecision(4));
+            document.write('<br>');
+            document.write("Precise to 5: "+parseFloat(a.toPrecision(5))); document.write(" OR => Precise to 5: "+a.toPrecision(5));
+            document.write('<br>');
+            document.write('<br>');
+
+            // to fixed
+            var b = 346.384;
+            document.write("b is : ",b+"<br><br>");
+            document.write("Precise to 1: "+parseFloat(b.toFixed(1))); document.write(" OR => Precise to 1: "+b.toFixed(1));
+            document.write('<br>');
+            document.write("Precise to 2: "+parseFloat(a.toFixed(2))); document.write(" OR => Precise to 2: "+a.toFixed(2));
+            document.write('<br>');
+            document.write("Precise to 3: "+parseFloat(a.toFixed(3))); document.write(" OR => Precise to 3: "+b.toFixed(3));
+            document.write('<br>');
+            document.write("Precise to 4: "+parseFloat(b.toFixed(4))); document.write(" OR => Precise to 4: "+b.toFixed(4));
+            document.write('<br>');
+            document.write("Precise to 5: "+parseFloat(b.toFixed(5))); document.write(" OR => Precise to 5: "+b.toFixed(5)); document.write('<br> <br>');
+
+            // to String
+            var c = 345;
+            document.write("c is : ",c+"<br><br>");
+            document.write("Converting a number to a string with base 2: "+c.toString(2)+"<br>");
+            document.write("Converting a number to a string with base 8: "+c.toString(8)+"<br>");
+            document.write("Converting a number to a string with base 16: "+c.toString(16)+"<br>");
+            document.write("When no parameter is passed: "+c.toString()); document.write('<br> <br>');
+
+            // toExponential() Function
+
+            var num = 2.13456; 
+            document.write("Number is : ",num+"<br><br>");
+            document.write("Passing 2 as an argument :"+num.toExponential(2));  document.write('<br> <br>');
+
+            // Number.isInteger( ) function
+ 
+            document.write("Number is Integer or not");  document.write('<br><br>');
+            document.write("-2 is passed : "+Number.isInteger(-2));  document.write('<br>');
+            document.write("-2.56 is passed : "+Number.isInteger(-2.56)); document.write('<br> <br>');
+
+
+            // The valueof() method in JavaScript is used to return the primitive value of a number.
+            //    This method is usually called internally by JavaScript and not explicitly in web code.
+
+            document.write("ValueOf function");document.write('<br> <br>');
+
+            var num1=213;  
+             document.write("Input : 213, Output : " + num1.valueOf()); document.write('<br> <br>');
+
+             var num2=0/0; 
+            document.write("Input :0/0 ,Output : " + num2.valueOf());
+
+
+            
+        </script>
+    </body>
+    </html>

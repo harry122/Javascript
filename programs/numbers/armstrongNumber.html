@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Armstrong Number or not</h2><br>
+    <lebel>Enter any NUMBER: </lebel><br><br>
+    <input type="number" placeholder="Enter Number" id="num"><br><br>
+    <input type="button" value="Enter to check" onclick="fun()">
+    <h2 id ="value"></h2>
+
+    <!--Armstrong number is a number when done cube of its all digits and later added is equals to thAT NUMBER--> 
+    <script>
+    let fun = () => {
+        var rem, temp ,final =0 ;
+                var number = Number(document.querySelector("#num").value);
+            temp = number;
+            while(number >=1)
+            {
+                rem = parseInt(number % 10);
+           //     alert(rem);
+                number = Number(number / 10);
+                final =final + rem*rem*rem;
+           //     alert(final);
+            }
+            if(final==temp)
+				{
+                    document.querySelector("#value").innerHTML="The number is Palindrome";
+                    document.querySelector("#value").style.color = "blue";
+
+				}
+				else
+				{
+                    document.querySelector("#value").innerHTML="The number is not palindrome";
+                    document.querySelector("#value").style.color = "red";
+				}
+    }
+</script>
+
+</body>
+</html>
