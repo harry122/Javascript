@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            display: table-cell;
+            border: 1px solid black;
+            padding : 25px;
+            text-align: center;
+
+        }
+        /* #outer{
+            color: red;
+            border: 1px solid black;
+            width: 400px;
+            height: 400px;
+        }
+        #inner{
+            color: blue;
+            border: 1px solid black;
+            width: 300px;
+            height: 300px;
+        }
+        #div3{
+            color: green;
+            border: 1px solid black;
+            width: 200px;
+            height: 200px;
+        } */
+    </style>
+</head>
+<body>
+    <div id="outer"> Outer
+        <div id="inner"> Inner <br><br>
+                <button>CLick</button>
+        </div>
+    </div>
+
+<script>
+
+    let btn = document.querySelector("button");
+    let inner = document.querySelector("#inner");
+    let outer = document.querySelector("#outer");
+
+    function changeBackOuter(e){
+        outer.style.backgroundColor = "red";
+        alert(" Outer CLick");
+        e.stopPropagation();
+    }
+
+    function changeBackInner(e){
+        inner.style.backgroundColor = "gray";
+        alert("Inner CLicked");
+    }
+
+    function btn1(e){
+       btn.style.backgroundColor = "blue";
+       alert("button clicked");
+    }
+
+    btn.addEventListener('click',changeBackOuter);
+    btn.addEventListener('click',changeBackInner);
+    btn.addEventListener('click',btn1);
+    
+    // capturing : if we pass the third parameter as true.
+
+</script>
+</body>
+</html>
