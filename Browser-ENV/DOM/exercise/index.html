@@ -47,23 +47,25 @@
     let outer = document.querySelector("#outer");
 
     function changeBackOuter(e){
+        // e.stopPropagation();
         outer.style.backgroundColor = "red";
         alert(" Outer CLick");
-        e.stopPropagation();
     }
 
     function changeBackInner(e){
+        // e.stopPropagation();
         inner.style.backgroundColor = "gray";
         alert("Inner CLicked");
     }
 
     function btn1(e){
+        e.stopPropagation();
        btn.style.backgroundColor = "blue";
        alert("button clicked");
     }
 
-    btn.addEventListener('click',changeBackOuter);
-    btn.addEventListener('click',changeBackInner);
+    outer.addEventListener('click',changeBackOuter);
+    inner.addEventListener('click',changeBackInner);
     btn.addEventListener('click',btn1);
     
     // capturing : if we pass the third parameter as true.

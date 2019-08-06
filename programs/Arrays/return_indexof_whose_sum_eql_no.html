@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Passing one array and 1 mumeric, AND CHECKING IF THE SUM OF ANY TWO ARRAY VALUE IS EQUAL TO THE GIVEN NUMBER<h3>
+    <script>
+    
+    let foo = (arr,val) => {
+      let sArr =  arr.sort((a,b)=> a > b ? 1 : -1);
+      console.log(sArr)
+        let fst = 0;
+        let lst = sArr.length - 1;
+        let arr1 = [];
+    for(var i in sArr)
+        if((sArr[fst] + sArr[lst]) == val)
+        {
+                arr1.push(fst,lst);
+                return arr1;
+        }
+        else if((sArr[fst] + sArr[lst]) < val){
+            ++fst;
+        }
+        else{
+            --lst;
+        }
+        
+
+    }
+
+    let f = foo([1,4,3,6,7],9);
+    console.log("Adding index values "+f+' we get the sum ');
+
+    </script>
+</body>
+</html>
