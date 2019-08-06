@@ -22,17 +22,19 @@
             return product;
         }
 
-    var foo1 = fun(0);
+    var foo1 = fun(5);
     console.log(foo1);
 
 // Factorial using recursion
     var fun2 = (n)=> {
         
-        if( n==0) return 1;
+        // if( n==0) return 1;
 
-        else
+        // else
 
-        return (n*fun2(n-1));
+        // return (n*fun2(n-1));
+
+     return n === 0 ? 1 : (n * fun2(n-1));
         
     }
     

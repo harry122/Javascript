@@ -14,11 +14,16 @@
 
         var arr = [];   
 
-        if (num == 0) return 0 ;
+        // if (num == 0) return 0 ;
 
-         if (num <= 1) return 1;
+        //  if (num <= 1) return 1;
 
-         return (fibonacci(num - 1) + fibonacci(num - 2));
+        //  return (fibonacci(num - 1) + fibonacci(num - 2));
+
+        
+        return num < 2 ? num : (fibonacci(num - 1) + fibonacci(num - 2))
+
+
     }
 
 var series = fibonacci(8);

@@ -24,6 +24,8 @@
  // slice
 var sliced = arr.slice(1,4);   // start index is included end is not included. it will not affact our original array.
 console.log(sliced);
+var shallowCopy = arr.slice(); // this is how to make a copy
+
 
 console.log(arr);
 // spliced
@@ -46,3 +48,9 @@ console.log(sorted1);
 var names = ['a','s','h','u'];
 console.log("join :",names.join(''));
 console.log("join :",names.join('-'));
+
+// Object.keys will return the index number in array
+
+var keys = Object.keys(names);
+
+console.log(keys);

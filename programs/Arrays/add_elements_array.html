@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h3>The <b>reduce()</b> method executes a reducer function (that you provide) on each element of the array, resulting in a single output value.</h3>
+    <script>
+        
+// Reduce
+
+let arr = [1,2,3,4,5];
+   let sum = arr.reduce((init,ele) => init + ele,0);
+   console.log("Sum with Reduce :",sum);
+        
+    
+
+// forEach
+
+let init = 0;
+let arr1 =  arr.forEach(ele =>{
+ let  sum = init + ele;
+})
+console.log("Sum with forEach :",sum);
+
+    </script>
+</body>
+</html>

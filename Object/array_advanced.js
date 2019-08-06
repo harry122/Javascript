@@ -29,16 +29,16 @@ let FirstLast = [];
 /* map() - Always return an array */
 
 
-// let fullName = inventors.map(function(ele,index,arry){
-//     // console.log(ele);
-//     // console.log(index);
-//     // console.log(arry);
+// let fullName1 = inventors.map(function(ele,index,arry){
+//     console.log(ele);
+//     console.log(index);
+//     console.log(arry);
 
 //     return `${ele.first} ${ele.last}`
-        
+         
 // });
 
-// console.log(fullName);
+//     console.log(fullName1);
 
 
 
@@ -148,6 +148,10 @@ console.log("totalOfYears with reduce :",totalYear);
 inventors.forEach(function(ele,index,arr){
     console.log(ele);
 });
+
+
+// The every() method executes the provided callback function once for each element present in the array until it finds one where callback returns a falsy value. If such an element is found, the every method immediately returns false.
+// The every method executes the provided callback function once for each element present in the array until it finds one where callback returns a falsy value. If such an element is found, the every method immediately returns false.
 
 
 

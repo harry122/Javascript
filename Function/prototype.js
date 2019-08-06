@@ -19,7 +19,7 @@ console.log(Person.length);                 // it will return the parameters we 
 
 console.log(Person.constructor);            // ƒ Function() { [native code] } this function is created behiend the seen with name of function only.
 
-console.log(Person.prototype);
+console.log("Person.prototype : ",Person.prototype);  // {constructor: ƒ}
 console.log(typeof Person.prototype);           // object only.
 
 Person.prototype.age = 25;                      // it will available to all the object created with function Person.
@@ -32,7 +32,7 @@ console.log(ashu.age);
 
 // function has 3 property  : length , constructor , prototype
 
-// object has contructor proprty attached to it,which return the same function .
+// object has contructor proprty attached to it,which return the same function.
 
 console.log(js.constructor);
 console.log(ashu.constructor);
@@ -49,11 +49,12 @@ console.log(ashu.constructor.prototype.hasOwnProperty('age'));
 console.log(Person.constructor.prototype.hasOwnProperty('age')); // false
 
 var str = js.age.toString();
-console.log(typeof str);
+console.log(typeof str);                  // String
 
 // prototype channing / prototyial inheritance
 console.log(Object.hasOwnProperty('toString'));
 console.log(Object.constructor.prototype.hasOwnProperty('toString'));
+
 
 // Object
 
@@ -61,21 +62,22 @@ var obj = {};
 
 var obj2 = new Object();
 
-console.log(obj.constructor);
-console.log(obj2.constructor.prototype);
+console.log("Obeject created simply by bracket : ",obj.constructor);
+console.log("Objected created by new object: ",obj2.constructor);
 
 // Array
 
 var arr = [1,2,3,4,5];
 var arr2 = new Array();
 
-console.log(arr2.constructor); 
+console.log("Object created simply by bracket : ",arr.constructor);
+console.log("Object created by new object: ",arr2.constructor); 
 
 // we can override 
 
 // Changing the behavior of the push property
 Array.prototype.push = function(){
-    return "Hello";
+    return "Hello"
 }
 
 console.log(arr2.push());
@@ -101,8 +103,8 @@ Array.prototype.add1 = function(){
 
 var arrNew = new Array(1,2,3);
 
-console.log(arrNew.add1());
-console.log(arr.add1());
+console.log("Created with keyword new and attaching add function : ",arrNew.add1());
+console.log("Object created simply by bracket : ",arr.add1());
 
 
 //  _proto_

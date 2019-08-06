@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        let fun = (a,b) => {
+
+           let val1 = a.toLowerCase();
+           let val2 = b.toLowerCase().split('');
+                console.log(val1);
+                console.log(val2);
+         //   let arr = [];
+            // let arr1 =[];
+            // let flag = 0;
+   return val2.filter((ele) => {
+    //    console.log(val1);
+    //    console.log(ele);
+          return val1.includes(ele)
+        });
+        }
+
+var f = fun('hello My Dear Friend','hodmz');
+
+console.log("should return contained item:",f);
+
+
+
+    </script>
+</body>
+</html>

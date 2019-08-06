@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let arr = [3,4,6,8,9];
+
+        let arr1 = [3,5,7,8,9];
+
+        let diffArr = arr.concat(arr1) ;
+
+        let newArray = [];
+
+//   let ar =  diffArr.filter( (arr,i) =>{ 
+//       if(arr[i] != arr[i+1])
+//         newArray.push(arr[i]);
+//  });
+
+// es6 => new set
+console.log(diffArr);
+
+function uniqueArray0(arr) {
+  var result = Array.from(new Set(arr));
+  return result
+}
+
+var res = uniqueArray0(diffArr);
+console.log("new set() way :",res);
+
+// filter way
+uniqueArray = diffArr.filter(function(item, pos) {
+//    console.log((diffArr.indexOf(item)) +" "+ pos);
+    return diffArr.indexOf(item) == pos;
+})
+
+console.log("filter() way",uniqueArray);
+        
+    </script>
+</body>
+</html>

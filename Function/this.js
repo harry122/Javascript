@@ -7,12 +7,14 @@ function foo(){
 foo();   
 
 
-let c  = 10;
+let c  = 10;     // its don't comes under global/window.
+var d = 78;
 
 function foo1(){
     var a = 10;
     console.log(this.c);  // it wil not work.
     console.log(this.a); // it will not work.
+    console.log(this.d); // it will work
 }
 
 foo1();
@@ -27,11 +29,12 @@ var obj = {
 
     colr : 'blue',
     description : function (){
-        console.log(this);
+        console.log("value of this : ",this);
+        console.log(this.colr);
 
     
     function foo(){
-        console.log("Inner function ", this)
+        console.log("Inner function ", this);
     }
 
     foo();

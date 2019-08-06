@@ -87,7 +87,7 @@ var query = 'name';
 
 console.log("Using bracket notation : ",person[query]);  // it will be like person.name
 
-console.log(person.query); // it will not work
+console.log(person.query); // it will not work ,will give undefined
 
 
 // if we want to add a value that we don't the name for it we can do that 

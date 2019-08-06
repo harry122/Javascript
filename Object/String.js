@@ -45,7 +45,7 @@ let newStr = str1.split(' ').join('-').toLowerCase();
 
 console.log(newStr);
 
-let newStr1 = str1.toLowerCase().split(' ').map(e => e.charAt(0)).join('-');
+let newStr1 = str1.toLowerCase().split(' ').map(arr => arr.charAt(0)).join('-');
 console.log(newStr1);
 
 

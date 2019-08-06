@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+          
+    //  let sumAll = arr =>{
+    //     let sum = 0;
+    //     let maxVal = Math.max(...arr);
+    //     let minVal = Math.min(...arr);
+    //     checkVal = minVal;
+    //     len = maxVal - minVal;
+    //     let para = document.createElement('p');
+    //     document.body.appendChild(para);
+
+    //     for(let i = 0; i<= len; i++){
+
+    //     if(checkVal <= maxVal)
+    //     {
+    //         sum = sum + checkVal;
+    //         console.log(checkVal);
+    //         ++checkVal;
+    //     }
+    //     para.innerText = `Sum of all the Values b/w ${minVal} and ${maxVal} is ${sum}`;
+    //   }
+    // }
+
+    // sumAll([8,16]);
+
+function sumAll(arr) {
+       var max = Math.max(arr[0], arr[1]);
+       var min = Math.min(arr[0], arr[1]);
+       var temp = 0;
+       for (var i = min; i <= max; i++) {
+         temp += i;
+       }
+       return temp;
+}
+
+let sum = sumAll([1, 4]);
+console.log(sum);
+
+
+// function sumAll(arr) {
+//   var sum = 0;
+//   for (var i = Math.min(...arr); i <= Math.max(...arr); i++) {
+//     sum += i;
+//   }
+//   return sum;
+// }
+
+// sumAll([1, 4]);
+
+    </script>
+</body>
+</html>
