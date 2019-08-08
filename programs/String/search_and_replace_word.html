@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="para">The replace() method returns a new string with some or all match of a pattern replaced by a replacement. The pattern can be a string or a RegExp, and the replacement can be a string or a function to be called for each match. If pattern is a string, only the first occurrence will be replaced.</p>
+
+    <label>Enter a word to replace : </label>
+    <input type="text" id="replace"></br></br>
+
+    <button id="btn">CLick Me</button>
+    <p id ="pa"></p>
+
+    <script>
+
+   // replace() method will be used
+    let btn = document.querySelector("button");
+    let newP = document.createElement('p');
+    var textnode = document.createTextNode("Enter by which value to replace :");
+    let newVal = document.createElement('input');
+    let btn1 = document.createElement('button');
+
+
+    btn.addEventListener('click',function(){
+
+        document.body.removeChild(btn);
+         newP.appendChild(textnode);
+         document.body.insertBefore(newP,document.body.appendChild(newVal));
+         newVal.setAttribute('type', 'text');
+         newVal.id ="classVal";
+      //   console.log(newVal);    
+         document.body.appendChild(btn1);
+         btn1.appendChild(document.createTextNode('click me to change the text'));
+    });
+
+    btn1.addEventListener('click',function(){
+
+        let para = document.querySelector("#para").innerHTML;
+        let val = document.querySelector("#replace").value;
+        
+     //   console.log(val);
+        let result = newVal.value;
+     //   console.log(result);
+        let res = para.replace(val,result);
+        para = res;
+
+    })
+
+    
+    
+    
+    </script>
+
+  
+</body>
+</html>
