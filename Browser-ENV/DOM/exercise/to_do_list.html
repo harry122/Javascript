@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    body{
+        text-align: center;
+    }
+    ul,li{
+
+       list-style-type: none;
+    }
+
+</style>
+</head>
+<body>
+    <h2>Todo List 2019</h2>
+
+    <ul class="list-items">
+        <li>List getting loaded...</li>
+    </ul>
+
+
+    </div>
+
+    <div class = 'add-todo'>
+            <input type="text">
+            <input type="submit" value="+ Add Item">
+    </div> 
+
+<script>
+
+    let subBtn = document.querySelector("input[type = submit]");
+    let inpt = document.querySelector("input[type = text]");
+    let toolItems = document.querySelector(".list-items");
+  //  let li = document.createElement('li');
+    let items =JSON.parse(localStorage.getItem('items')) || [];
+
+    function addItems(){
+
+        let value = inpt.value;
+
+        let itm ={
+            value,
+            done : false
+        }
+        items.push(itm);
+        localStorage.setItem('items',JSON.stringify(items));
+        renderlist(items,toolItems);
+        inpt.value = '';
+    }
+
+    function renderlist(list,displayList){
+
+        displayList.innerHTML = list.map(function(ele,i){
+
+            return `
+                <li>
+                    <input type='checkbox' data-id ="${i}" ${ele.done ? 'checked' : ''} id=item${i}>
+                    <label for=items${i}">${ele.value}</label>
+
+                </li>
+           `
+           }).join('');
+    }
+
+    function toggle(e){
+        if(!e.target.matches('input')) return;
+
+        let ele = e.target;
+        let index = parseInt(ele.dataset.id);
+        let itm = items[index];
+        console.log(itm);
+        items[index].done = !items[index].done;                 // toggle
+        localStorage.setItem('items',JSON.stringify(items));
+        renderlist(items,toolItems);
+    }
+
+    renderlist(items,toolItems);
+
+    subBtn.addEventListener('click',addItems);
+
+    toolItems.addEventListener('click',toggle);
+
+</script>
+</body>
+</html>

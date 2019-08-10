@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+        }
+
+        #showTime{
+            position: absolute;
+            color: white;
+            transform: translateX(-50%) translateY(-50%);     
+            top: 50%;
+            left: 50%;
+            font-size: 50px;
+            letter-spacing: 6px;
+            font-family:fantasy;
+        }   
+        
+    </style>
+</head>
+<body>
+    <div id="showTime"></div>
+    <script>
+        
+    let ClockTIme = () =>{
+        let tim = new Date();
+        let m = tim.getMinutes();
+        let h = tim.getHours();
+        let s = tim.getSeconds();
+
+        let min= addZero(m);
+        let hr = addZero(h);
+        let sec = addZero(s);
+
+        document.querySelector('#showTime').innerHTML = hr + ' : '+ min + ' : '+ sec;
+
+        setTimeout(ClockTIme,1000);
+
+        function addZero(i){
+
+            if(i < 10){
+              return i = '0'+ i;
+            }
+            else
+            return i;
+        }
+
+    }
+
+    ClockTIme();
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <h3 id="heading">childNodes</h3>
+
+<div>
+
+    <p id="first">The Node.childNodes read-only property returns a live NodeList of child nodes of the given element where the first child node is assigned index 0</p>
+
+    <p id="second">1. The items in the collection of nodes are objects and not strings. To get data from node objects, use their properties (e.g. elementNodeReference.childNodes[1].nodeName to get the name, etc.).<br><span>2. The document object itself has 2 children: the Doctype declaration and the root element, typically referred to as documentElement. (In (X)HTML documents this is the HTML element.)<br></span>3. childNodes includes all child nodes, including non-element nodes like text and comment nodes. To get a collection of only elements, use ParentNode.children instead.</p>
+    
+</div>
+
+     <p id ="third" style = "color : blue">offers web authors three ways for specifying lists of information. All lists must contain one or more list elements. Lists may contain −<p>
+    <ul id ="un">
+    <li><h3>An unordered list.</h3> This will list items using plain bullets.</li>
+
+    <li><h3>An ordered list.</h3> This will use different schemes of numbers to list your items.</li>
+
+    <li><h3>A definition list.</h3> This arranges your items in the same way as they are arranged in a dictionary.</li>
+    </ul>
+
+
+    <script>
+
+    let foo = (val) => {
+
+        if(val == 'body')
+        console.log(parentNode);
+            if(document.body.hasChildNodes)
+            {
+          for(ele of document.body.childNodes)   {  
+               console.log(ele);
+          //    console.log(document.body.childNodes[i].nodeName);
+
+           
+           }
+    }
+}
+
+    foo('body');
+
+    </script>
+</body>
+</html>
