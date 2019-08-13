@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+        body{
+           margin: 0
+        }
+
+            .hero{
+                min-height: 100vh;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+            }
+
+        h1{
+            text-shadow: 5px 3px  0 rgba(0,233,240);
+
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class ='hero'>
+
+        <h1>Harry</h1>
+
+    </div>
+
+<script>
+
+    let hero = document.querySelector('.hero');
+
+    let head = document.querySelector('h1');
+
+    // let random = function(){ 
+        
+    //     Math.floor(Math.random()*100);
+    
+    // }
+
+    function shadow(e){
+
+        console.log(e);
+
+        let{offsetHeight :height ,offsetWidth : width} = hero;
+
+        let{clientX: x ,clientY : y} = e;
+
+        head.style.textShadow = `${x-offsetLeft}px ${y-offsetHeight}px 0 green`;
+
+    }
+
+    hero.addEventListener('mousemove',shadow);
+
+</script>
+</body>
+</html>

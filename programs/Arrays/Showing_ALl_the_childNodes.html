@@ -30,22 +30,48 @@
 
     <script>
 
-    let foo = (val) => {
+    // let foo = (val) => {
 
-        if(val == 'body')
-        console.log(parentNode);
-            if(document.body.hasChildNodes)
-            {
-          for(ele of document.body.childNodes)   {  
-               console.log(ele);
-          //    console.log(document.body.childNodes[i].nodeName);
+    //  //   if(val == document.body)
+    //  //   console.log(parentNode);
+    //         if(val.hasChildNodes()){
 
-           
-           }
+    //          for(ele of val.childNodes){
+                
+    //             console.log(`node ${ele.nodeName}`);
+        
+    //         if(ele.nextSibling){
+    //         //     let nextNode = ele.nextSibling;
+    //         //     while (nextNode && nextNode.nodeType !== 1) {
+    //         //      console.log(nextNode.nodeName);
+    //         //     }
+    //         // }
+    //         if(ele.nextSibling.childNodes){
+    //             //console.log("sibling",ele.nextSibling.childNodes);
+    //                if(ele.childNodes.childNodes){
+    //                     Array.from(ele.childNodes.childNodes).forEach( ele => console.log("child 2",ele.nodeName)  );
+    //                }
+    //         }
+    //            else console.log("helllllllllllllllllllllllllllo");
+    //          }
+                      
+    //         }     
+    // }
+
+    // foo(document.body);
+
+    function walkDOM(n) {
+        do {
+            console.log(n);
+            if(n.hasChildNodes()){
+                walkDOM(n.firstChild);
+            }
+
+         } while(n = n.nextSibling)
     }
-}
 
-    foo('body');
+    walkDOM(document.body);
+
 
     </script>
 </body>
