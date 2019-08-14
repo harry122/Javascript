@@ -6,14 +6,6 @@
  */
 
 
-
-
-
-
-
-
-
-
 let sbmtBtn = document.querySelector('button');
 let inpt = document.querySelector('input');
 let displayImg = document.querySelector('.images');

@@ -82,25 +82,40 @@
             }
 
             let resp = JSON.parse(xhr.responseText);    
-         //   console.log(resp);
-            let imgs = resp.data;
-            let newAr =  [];
 
-         Array.from(imgs).forEach(function(ele){
-          //   console.log(ele);
-               newAr.push(ele.images.downsized);
-            });
-        //    console.log(newAr);
-        
-            for(let y in newAr){
-        
-                let img = document.createElement('img');
+            resp.data.forEach((ele,i) => {
 
-               img.src = newAr[y].url;
+            console.log(ele.images.downsized.url);
+
+            let img = document.createElement('img');
+
+            img.src = ele.images.downsized.url;
 
             displayImg.appendChild(img);
 
-            }
+        });
+
+
+
+         //   console.log(resp);
+        //     let imgs = resp.data;
+        //     let newAr =  [];
+
+        //  Array.from(imgs).forEach(function(ele){
+        //   //   console.log(ele);
+        //        newAr.push(ele.images.downsized);
+        //     });
+        // //    console.log(newAr);
+        
+        //     for(let y in newAr){
+        
+        //         let img = document.createElement('img');
+
+        //        img.src = newAr[y].url;
+
+        //     displayImg.appendChild(img);
+
+        //     }
 
 
             // }

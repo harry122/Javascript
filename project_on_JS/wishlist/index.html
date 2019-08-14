@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WishList</title>
+
+    <style>
+        body {
+            font-family: Arial;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>JavaScript wishlist example</h1>
+
+    <p>
+        In this example, we're going to write a small application that lets us add products to a wishlist. Please note
+        that it's 100% client side and we don't store any data, so if you refresh your page: the wishlist will be
+        emptied.
+    </p>
+
+    <p>
+        This example has 3 products, each product has its Add to wishlist button. When we click on this button, the
+        product will be added to the wishlist, which will then be refresh and displayed.
+    </p>
+
+    <p>
+        We will create a the prototype object to create a class that will be responsible to manage the wishlist. The
+        skeleton of this class is already created, you will need to write the methods not implemented.
+    </p>
+    <span><b>Note</b> <i>Please read the instructions in app.js and try to implement.</i></span>
+
+    <h2>Products</h2>
+
+    <ul>
+        <li>
+            <span>Product 1</span>
+            <button id="product-1" data-id="P1" data-name="Product 1" class="add-to-wishlist">Add to wishlist</button>
+        </li>
+        <li>
+            <span>Product 2</span>
+            <button id="product-2" data-id="P2" data-name="Product 2" class="add-to-wishlist">Add to wishlist</button>
+        </li>
+        <li>
+            <span>Product 3</span>
+            <button id="product-3" data-id="P3" data-name="Product 3" class="add-to-wishlist">Add to wishlist</button>
+        </li>
+    </ul>
+
+    <h2>Wishlist</h2>
+
+    <ul id="wishlist">
+    </ul>
+    <script src="app.js"></script>
+</body>
+
+</html>
