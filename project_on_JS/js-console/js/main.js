@@ -1,9 +1,10 @@
 var geval = eval;
+var inputForm = document.createElement('input');
+
 function createInput() {
     var inputDiv = document.createElement('div');
     var inputPara = document.createElement('p');
-    var inputForm = document.createElement('input');
-
+  
     inputDiv.setAttribute('class','input');
     inputPara.textContent = '>';
     inputDiv.appendChild(inputPara);
@@ -19,7 +20,12 @@ function createInput() {
 
 function executeCode(e) {
     // write your code here to execute codes from input field;
-    // HINT: Use eval() function to execute JS Code.
+    // HINT: Use eval() function to execute JS Code
+    let input =inputForm.value;
+    
+    console.log(geval(input));
+    createInput();
+
 }
 
 createInput();

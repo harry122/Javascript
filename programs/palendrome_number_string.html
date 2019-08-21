@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function palandrome(n){
+            let num =n;
+            console.log(num);  
+        //     let sum = 0;
+        //     while(num > 0 ){
+        //     //     rem = parseInt(num) % 10;
+        //     //     num = parseInt(num/10);
+        //     //     sum = (sum * 10) + rem;
+        //     // //    console.log(sum);   
+        //     }
+        //  if(sum == n){
+        //  return true;
+        // }
+        // else{
+        //     return false;
+        // }
+        let sum= '';
+        num = num.split('');
+     //      console.log(num);
+           let len = num.length-1;
+      //     console.log(len)
+        while(len >= 0){
+        sum = sum + num[len];
+        len --;
+        }
+        return sum;
+    }
+
+  let s = palandrome('mad');
+  console.log(s);
+
+    </script>
+</body>
+</html>

@@ -40,4 +40,6 @@ button {
   width: 20%;
   float: left;
   cursor: pointer;
+  margin-top:2px;
+  
 }

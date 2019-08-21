@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        ul{
+            list-style-type: none;
+        }
+        ul li{
+            list-style-type: disc;
+        }
+    </style>
+</head>
+<body>
+    <ul class="unordered_list" data-id="unordered">
+        <li><ul>
+            <li>1</li>
+            <li>2</li>
+            <li><ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+            </ul></li>
+        </ul></li>
+
+    </ul>
+    <script>
+        let unordered = document.querySelector('.unordered_list');
+        let list = document.querySelector('li');
+        // console.log(unordered);
+        // console.log(list);
+    
+    unordered.addEventListener('click',function(e){
+        console.log(e.target);
+        var tar = e.target;
+        tar.style.backgroundColor = "yellow";
+        console.log("parent", tar.parentNode);
+        tar.parentNode.style.backgroundColor ="blue";
+        
+    })
+
+    </script>
+</body>
+</html>
