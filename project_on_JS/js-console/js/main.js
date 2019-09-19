@@ -21,10 +21,8 @@ function createInput() {
 function executeCode(e) {
     // write your code here to execute codes from input field;
     // HINT: Use eval() function to execute JS Code
-    let input =inputForm.value;
+    console.logout = console.log;
     
-    console.log(geval(input));
-    createInput();
 
 }
 

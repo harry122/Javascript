@@ -59,7 +59,6 @@ Wishlist.prototype.render = function () {
         remove.addEventListener('click', (e) => {
         this.remove(index);
         //console.log(this.element.removeChild(li));
-        
         });
 
         li.innerHTML = i.name;
